@@ -1,0 +1,67 @@
+//apply plugin: 'com.github.dcendents.android-maven'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    
+    
+}
+
+
+
+android {
+    compileSdk 33
+    namespace "com.blaqbokx"
+    defaultConfig {
+        applicationId "com.blaqbokx"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures{
+        compose true
+    }
+
+    composeOptions{
+        kotlinCompilerExtensionVersion '1.5.4'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation files('libs/opus-1.0.5.aar')
+    //implementation 'com.github.axet:opus:1.0.5'
+    //implementation 'com.github.naman14:TAndroidLame:1.1'
+    //implementation 'de.maxhenkel.opus4j:opus4j:2.0.2'
+    implementation 'androidx.activity:activity-compose:1.3.0-alpha06'
+    implementation "com.google.accompanist:accompanist-permissions:0.29.0-alpha"
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+    implementation "com.github.wiryadev:BootstrapIconsCompose:0.2.0"
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.activity:activity-compose:1.3.1'
+    implementation "androidx.compose.animation:animation:1.1.1"
+    implementation "androidx.compose.foundation:foundation:1.1.1"
+    implementation "androidx.compose.material:material:1.1.1"
+    implementation "androidx.compose.material3:material3:1.1.2"
+    implementation "androidx.compose.material:material-icons-extended"
+    implementation "androidx.compose.runtime:runtime:1.1.1"
+    implementation "androidx.compose.ui:ui:1.1.1"
+    implementation 'com.google.android.material:material:1.4.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}

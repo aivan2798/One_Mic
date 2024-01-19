@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.App.First" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/main_color</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/microphone</item>
+        <item name="postSplashScreenTheme">@style/Theme.OneMic</item>   
+    </style>
+
+</resources>
